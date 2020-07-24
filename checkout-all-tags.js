@@ -14,6 +14,8 @@ if (!url) {
   process.exit(1);
 }
 
+// TODO die if url is not real repo
+
 const repoName = getRepoName(url);
 
 shell.exec(`git clone ${url} ${repoName}`);
